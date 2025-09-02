@@ -26,6 +26,8 @@ jobs:
       with:
         go-version-file: 'go.mod'
         cache: true
+    - name: tidy up go mod
+      run: go mod tidy
 
     - name: Revive Action
       uses: morphy2k/revive-action@v2.4.1
